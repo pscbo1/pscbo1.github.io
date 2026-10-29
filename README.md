@@ -15,7 +15,7 @@
 ## GitHub 与发布
 
 预计使用 pscbo1.github.io 免费网址。目前尚未公开发布。
-本仓库若创建，将先保持私有且不开启 Pages；确认公开内容后，才准备发布目录和开启 Pages。
+本仓库已创建并保持私有，Pages 尚未开启；确认公开内容后，才准备发布目录和开启 Pages。
 当前 content/site.json 的 publication_approved=false，构建带 noindex 标记；--release 被禁止。
 不要上传电脑上的完整 WordPress 备份、review、work、个人留档或数据库。
 
