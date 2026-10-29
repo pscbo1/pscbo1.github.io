@@ -12,7 +12,9 @@
 python build.py --release
 ```
 
-main 保存源码与 dist；gh-pages 仅保存 dist 中的发布文件。更新后提交 main，将 dist 同步到 gh-pages。无需WordPress、npm或数据库。
+修改并提交 main 后，GitHub Actions 会自动构建并发布 dist。gh-pages 是初次发布时的历史分支，不再作为更新入口。无需WordPress、npm或数据库。
+
+具体操作见 [自己更新网站](更新说明.md)。
 
 默认 `python build.py` 生成带 noindex 的审阅版本；`--release` 使用已批准的发布开关并允许搜索引擎索引。
 
