@@ -1,28 +1,23 @@
-# Pscbo1 — 个人网站第二版（本地审阅）
+# Pscbo1 — 照片与文字
 
-只承载个人表达，不含求职作品集入口。原排版完整留存在本地，网站源文件与私人存档分开。
+个人网站，发布地址：https://pscbo1.github.io/
 
-结构：首页（旧首页四张照片原顺序）、摄影（原照片组合＋安提瓜风筝节视频）、文字（小村记述、国家地理试译）。2024 选集是次级入口。
+首页保留四张照片；摄影沿用原来的六组编排，包括安提瓜风筝节和2024深山拜年视频；文字为小村记述和Patriarchy译文，注明National Geographic原文来源。2024选集作为次级入口。
 
-安提瓜探索经验集暂不放入网站。Other Works 和 memories_6 仅本地留档。Notion 风景摄影尚未完成导入。
+## 更新
 
-## 本地查看与更新
+编辑 content/ 中的HTML和资源文件，然后运行：
 
-运行 `python build.py` 生成 dist/，直接打开 dist/index.html 即可浏览。
-文章、照片编排在 content/*.html，使用简单 HTML；资源在 content/assets/。
-修改 content 后再次运行 build.py。不需要 npm、WordPress 或数据库。
+```sh
+python build.py --release
+```
 
-## GitHub 与发布
+main 保存源码与 dist；gh-pages 仅保存 dist 中的发布文件。更新后提交 main，将 dist 同步到 gh-pages。无需WordPress、npm或数据库。
 
-预计使用 pscbo1.github.io 免费网址。目前尚未公开发布。
-本仓库已创建并保持私有，Pages 尚未开启；确认公开内容后，才准备发布目录和开启 Pages。
-当前 content/site.json 的 publication_approved=false，构建带 noindex 标记；--release 被禁止。
-不要上传电脑上的完整 WordPress 备份、review、work、个人留档或数据库。
+默认 `python build.py` 生成带 noindex 的审阅版本；`--release` 使用已批准的发布开关并允许搜索引擎索引。
 
-## 保留说明
+## 视频和素材
 
-页面照片分组、次序与原图比例来源于原站；主题框架改为独立静态 CSS。
-Google 字体已放在本地，网页运行不依赖原域名。视频保留原文件，不自动播放。
-图片为适合网页浏览的派生副本，原图和历史版本保留于 E 盘主备份。
+安提瓜风筝节使用本地MP4；深山拜年使用本地封面和点击后加载的YouTube播放器，并提供Bilibili和YouTube原页入口。后者的4K成片及个人归档保留在本地，不在本仓库。平台播放器受访问网络和平台可用性影响。
 
-2026-10-29 审阅调整：2024 自然摄影使用独立的小蓝色入口；译文介绍简化为个人翻译说明，去掉页面上的试译经历、用途声明与预览提示。原说明仍在本地旧站备份内保留，PDF文件未修改。Pages仍未开启。
+字体与图片均由本站提供。网页图片是派生副本；完整WordPress备份、私人文字、Other Works、Memories 6和个人存档不属于本仓库。
